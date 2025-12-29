@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const PhilosophySection = () => {
   const [progress, setProgress] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +28,17 @@ const PhilosophySection = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const gapWidth = Math.max(20, 120 - progress * 100); // Smaller gap on mobile
+  // Gap reduction as user scrolls - cards come together
+  const gapReduction = progress * 60;
+
+  // Mobile: vertical movement (Y axis), Desktop: horizontal movement (X axis)
+  const educationTransform = isMobile 
+    ? `translateY(${40 - gapReduction}px)` 
+    : `translateX(${-80 + gapReduction}px)`;
+  
+  const corporateTransform = isMobile 
+    ? `translateY(${-40 + gapReduction}px)` 
+    : `translateX(${80 - gapReduction}px)`;
 
   return (
     <section ref={sectionRef} className="py-16 sm:py-24 px-4 sm:px-6 overflow-hidden">
@@ -35,13 +47,11 @@ const PhilosophySection = () => {
           <span className="text-golden">Bridging</span> the Gap
         </h2>
         
-        <div className="relative flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-0 min-h-[280px] sm:min-h-[300px]">
+        <div className="relative flex flex-col sm:flex-row items-center justify-center min-h-[320px] sm:min-h-[300px]">
           {/* Education Side */}
           <div
             className="glass-card rounded-2xl p-6 sm:p-8 text-center transition-all duration-300 ease-out w-full sm:w-auto max-w-[200px]"
-            style={{
-              transform: `translateX(${typeof window !== 'undefined' && window.innerWidth >= 640 ? -gapWidth / 2 : 0}px)`,
-            }}
+            style={{ transform: educationTransform }}
           >
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🎓</span>
@@ -56,7 +66,7 @@ const PhilosophySection = () => {
 
           {/* Bridge - The Yellow Ladder */}
           <div
-            className="sm:absolute w-2 sm:w-4 transition-all duration-300 ease-out"
+            className="absolute w-2 sm:w-4 transition-all duration-300 ease-out"
             style={{
               opacity: progress,
               height: `${Math.max(40, progress * 80)}px`,
@@ -68,9 +78,7 @@ const PhilosophySection = () => {
           {/* Corporate Side */}
           <div
             className="glass-card rounded-2xl p-6 sm:p-8 text-center transition-all duration-300 ease-out w-full sm:w-auto max-w-[200px]"
-            style={{
-              transform: `translateX(${typeof window !== 'undefined' && window.innerWidth >= 640 ? gapWidth / 2 : 0}px)`,
-            }}
+            style={{ transform: corporateTransform }}
           >
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🏢</span>
