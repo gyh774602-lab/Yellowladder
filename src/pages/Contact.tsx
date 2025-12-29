@@ -29,32 +29,32 @@ const Contact = () => {
   };
 
   return (
-    <main className="pt-20 pb-32">
+    <main className="pt-16 sm:pt-20 pb-32">
       {/* Hero */}
-      <section className="py-20 px-6 text-center">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 text-center">
         <div className="container max-w-4xl mx-auto">
-          <span className="text-accent text-sm font-semibold uppercase tracking-widest mb-4 block">
+          <span className="text-accent text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4 block">
             Start Your Climb
           </span>
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
             Get in <span className="text-golden">Touch</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Your ladder is ready. Are you?
           </p>
         </div>
       </section>
 
       {/* Inquiry Type Selection */}
-      <section className="px-6 mb-12">
+      <section className="px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="container max-w-2xl mx-auto">
-          <p className="text-center text-muted-foreground mb-6">How can we help?</p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <p className="text-center text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">How can we help?</p>
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
             {inquiryTypes.map((type) => (
               <button
                 key={type.id}
                 onClick={() => setSelectedType(type.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all ${
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all active:scale-95 ${
                   selectedType === type.id
                     ? "bg-gradient-golden text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]"
                     : "glass-card text-foreground/70 hover:text-foreground hover:border-primary/50"

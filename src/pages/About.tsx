@@ -64,59 +64,59 @@ const About = () => {
   }, []);
 
   return (
-    <main className="pt-20 pb-32">
+    <main className="pt-16 sm:pt-20 pb-32">
       {/* Hero */}
-      <section className="py-20 px-6 text-center">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 text-center">
         <div className="container max-w-4xl mx-auto">
-          <span className="text-accent text-sm font-semibold uppercase tracking-widest mb-4 block">
+          <span className="text-accent text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4 block">
             The DNA
           </span>
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
             Our <span className="text-golden">Story</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             From a single idea to a movement transforming thousands of careers.
           </p>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section ref={timelineRef} className="py-16 px-6 relative">
+      {/* Timeline - Mobile optimized */}
+      <section ref={timelineRef} className="py-12 sm:py-16 px-4 sm:px-6 relative">
         <div className="container max-w-4xl mx-auto">
-          {/* Glowing vertical line */}
-          <div className="absolute left-1/2 top-0 w-1 h-full bg-muted -translate-x-1/2">
+          {/* Glowing vertical line - positioned for mobile */}
+          <div className="absolute left-6 sm:left-1/2 top-0 w-1 h-full bg-muted sm:-translate-x-1/2">
             <div
               className="w-full golden-line transition-all duration-100"
               style={{ height: `${scrollProgress * 100}%` }}
             />
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-16 pl-10 sm:pl-0">
             {timelineEvents.map((event, index) => (
               <div
                 key={event.year}
-                className={`relative flex items-center gap-8 ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`relative sm:flex sm:items-center sm:gap-8 ${
+                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                 }`}
               >
+                {/* Node - positioned for mobile */}
+                <div className="absolute left-[-26px] sm:left-1/2 sm:-translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-golden shadow-[0_0_20px_rgba(255,215,0,0.5)]" />
+
                 {/* Content */}
-                <div className={`w-1/2 ${index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"}`}>
-                  <div className="glass-card rounded-2xl p-6 inline-block">
-                    <span className="text-golden font-display text-2xl font-bold">
+                <div className={`sm:w-1/2 ${index % 2 === 0 ? "sm:text-right sm:pr-8" : "sm:text-left sm:pl-8"}`}>
+                  <div className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-6 inline-block w-full sm:w-auto">
+                    <span className="text-golden font-display text-xl sm:text-2xl font-bold">
                       {event.year}
                     </span>
-                    <h3 className="font-display text-xl font-semibold text-foreground mt-2">
+                    <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mt-1 sm:mt-2">
                       {event.title}
                     </h3>
-                    <p className="text-muted-foreground mt-2">{event.description}</p>
+                    <p className="text-muted-foreground mt-1 sm:mt-2 text-sm sm:text-base">{event.description}</p>
                   </div>
                 </div>
 
-                {/* Node */}
-                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-golden shadow-[0_0_20px_rgba(255,215,0,0.5)]" />
-
-                {/* Spacer */}
-                <div className="w-1/2" />
+                {/* Spacer - only on desktop */}
+                <div className="hidden sm:block sm:w-1/2" />
               </div>
             ))}
           </div>
@@ -124,22 +124,22 @@ const About = () => {
       </section>
 
       {/* Impact Pulse */}
-      <section className="py-24 px-6 bg-background-end/30">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background-end/30">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
             The <span className="text-golden">Impact</span> Pulse
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {impactStats.map((stat) => (
               <div
                 key={stat.label}
-                className="glass-card rounded-2xl p-8 text-center animate-pulse-glow"
+                className="glass-card rounded-xl sm:rounded-2xl p-4 sm:p-8 text-center animate-pulse-glow"
               >
-                <div className="text-golden font-display text-3xl md:text-4xl font-bold mb-2">
+                <div className="text-golden font-display text-2xl sm:text-3xl md:text-4xl font-bold mb-1 sm:mb-2">
                   {stat.value}
                 </div>
-                <p className="text-muted-foreground text-sm">{stat.label}</p>
+                <p className="text-muted-foreground text-xs sm:text-sm">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -147,25 +147,25 @@ const About = () => {
       </section>
 
       {/* Mentors */}
-      <section className="py-24 px-6">
+      <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
             The <span className="text-golden">Mentors</span>
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {mentors.map((mentor) => (
               <div
                 key={mentor.name}
-                className="glass-card grass-glow rounded-2xl p-6 text-center group cursor-pointer"
+                className="glass-card grass-glow rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center group cursor-pointer active:scale-[0.98] transition-transform"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-golden flex items-center justify-center mx-auto mb-4 text-2xl font-display font-bold text-primary-foreground group-hover:shadow-[0_0_40px_rgba(173,255,47,0.4)] transition-shadow">
+                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-golden flex items-center justify-center mx-auto mb-3 sm:mb-4 text-lg sm:text-2xl font-display font-bold text-primary-foreground group-hover:shadow-[0_0_40px_rgba(173,255,47,0.4)] transition-shadow">
                   {mentor.initials}
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground">
+                <h3 className="font-display text-sm sm:text-lg font-semibold text-foreground">
                   {mentor.name}
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">{mentor.role}</p>
+                <p className="text-muted-foreground text-xs sm:text-sm mt-1">{mentor.role}</p>
               </div>
             ))}
           </div>
@@ -173,14 +173,14 @@ const About = () => {
       </section>
 
       {/* Vision Quote */}
-      <section className="py-24 px-6">
+      <section className="py-16 sm:py-24 px-4 sm:px-6">
         <div className="container max-w-4xl mx-auto text-center">
-          <blockquote className="font-display text-2xl md:text-4xl italic text-foreground leading-relaxed">
+          <blockquote className="font-display text-xl sm:text-2xl md:text-4xl italic text-foreground leading-relaxed px-4">
             "We measure success by the
             <span className="text-golden"> confidence </span>
             we instill."
           </blockquote>
-          <p className="text-muted-foreground mt-6">— The Yellow Ladder Team</p>
+          <p className="text-muted-foreground mt-4 sm:mt-6 text-sm sm:text-base">— The Yellow Ladder Team</p>
         </div>
       </section>
     </main>
