@@ -15,70 +15,67 @@ const FloatingNav = () => {
   const location = useLocation();
 
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-      {/* Circular Menu Items */}
-      <div
-        className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-4 transition-all duration-500 ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="flex flex-col items-center gap-3">
-          {navItems.map((item, index) => {
-            const Icon = item.icon;
-            const isActive = location.pathname === item.path;
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setIsOpen(false)}
-                className={`glass-card flex items-center gap-3 px-4 py-3 rounded-full transition-all duration-300 ${
-                  isActive ? "border-primary/50" : ""
-                }`}
-                style={{
-                  transitionDelay: isOpen ? `${index * 50}ms` : "0ms",
-                  transform: isOpen ? "translateY(0)" : "translateY(20px)",
-                }}
-              >
-                <Icon
-                  className={`w-5 h-5 ${
-                    isActive ? "text-primary" : "text-foreground/70"
-                  }`}
-                />
-                <span
-                  className={`text-sm font-medium ${
-                    isActive ? "text-primary" : "text-foreground/70"
-                  }`}
-                >
-                  {item.label}
-                </span>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Main FAB Button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`relative w-14 h-14 rounded-full btn-golden flex items-center justify-center transition-all duration-300 ${
-          isOpen ? "rotate-45" : ""
-        }`}
-      >
-        {isOpen ? (
-          <X className="w-6 h-6" />
-        ) : (
-          <Menu className="w-6 h-6" />
-        )}
-      </button>
-
+    <>
       {/* Backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-background/50 backdrop-blur-sm -z-10"
+          className="fixed inset-0 bg-background/80 backdrop-blur-md z-40"
           onClick={() => setIsOpen(false)}
         />
       )}
-    </div>
+
+      {/* Navigation Menu - Full screen on mobile */}
+      <div
+        className={`fixed inset-x-0 bottom-0 z-50 transition-all duration-500 ease-out ${
+          isOpen 
+            ? "translate-y-0 opacity-100" 
+            : "translate-y-full opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="bg-background/95 backdrop-blur-xl border-t border-border rounded-t-3xl px-6 pb-8 pt-6 safe-area-bottom">
+          <div className="w-12 h-1 bg-muted-foreground/30 rounded-full mx-auto mb-6" />
+          
+          <nav className="grid grid-cols-3 gap-4 max-w-sm mx-auto">
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = location.pathname === item.path;
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex flex-col items-center gap-2 p-4 rounded-2xl transition-all duration-300 active:scale-95 ${
+                    isActive 
+                      ? "bg-gradient-golden text-primary-foreground" 
+                      : "glass-card hover:border-primary/50"
+                  }`}
+                >
+                  <Icon className="w-6 h-6" />
+                  <span className="text-xs font-medium">{item.label}</span>
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      </div>
+
+      {/* Main FAB Button - Always visible */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-16 h-16 rounded-full btn-golden flex items-center justify-center transition-all duration-300 active:scale-95 ${
+          isOpen ? "rotate-45 bg-muted" : ""
+        }`}
+        style={{ 
+          boxShadow: isOpen ? "none" : "0 0 40px rgba(255, 215, 0, 0.5)",
+        }}
+      >
+        {isOpen ? (
+          <X className="w-7 h-7" />
+        ) : (
+          <Menu className="w-7 h-7" />
+        )}
+      </button>
+    </>
   );
 };
 

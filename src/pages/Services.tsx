@@ -55,29 +55,29 @@ const Services = () => {
   const programs = activeSegment === "students" ? studentPrograms : institutionPrograms;
 
   return (
-    <main className="pt-20 pb-32">
+    <main className="pt-16 sm:pt-20 pb-32">
       {/* Hero */}
-      <section className="py-20 px-6 text-center">
+      <section className="py-12 sm:py-20 px-4 sm:px-6 text-center">
         <div className="container max-w-4xl mx-auto">
-          <span className="text-accent text-sm font-semibold uppercase tracking-widest mb-4 block">
+          <span className="text-accent text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4 block">
             The Path
           </span>
-          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
             Programs & <span className="text-golden">Services</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
             Tailored interventions for students and institutions alike.
           </p>
         </div>
       </section>
 
       {/* Segment Toggle */}
-      <section className="px-6">
+      <section className="px-4 sm:px-6">
         <div className="container max-w-xl mx-auto">
-          <div className="glass-card rounded-full p-2 flex">
+          <div className="glass-card rounded-full p-1.5 sm:p-2 flex">
             <button
               onClick={() => setActiveSegment("students")}
-              className={`flex-1 py-4 rounded-full font-semibold transition-all ${
+              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${
                 activeSegment === "students"
                   ? "bg-gradient-golden text-primary-foreground"
                   : "text-foreground/70 hover:text-foreground"
@@ -87,7 +87,7 @@ const Services = () => {
             </button>
             <button
               onClick={() => setActiveSegment("institutions")}
-              className={`flex-1 py-4 rounded-full font-semibold transition-all ${
+              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${
                 activeSegment === "institutions"
                   ? "bg-gradient-golden text-primary-foreground"
                   : "text-foreground/70 hover:text-foreground"
@@ -100,27 +100,27 @@ const Services = () => {
       </section>
 
       {/* Program Cards */}
-      <section className="py-16 px-6">
+      <section className="py-10 sm:py-16 px-4 sm:px-6">
         <div className="container max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {programs.map((program, index) => {
               const Icon = program.icon;
               return (
                 <div
                   key={program.title}
-                  className="glass-card grass-glow rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2"
+                  className="glass-card grass-glow rounded-xl sm:rounded-2xl p-6 sm:p-8 transition-all duration-300 active:scale-[0.98] sm:hover:-translate-y-2"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-14 h-14 rounded-xl bg-gradient-golden flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(255,215,0,0.4)]">
-                    <Icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-golden flex items-center justify-center mb-4 sm:mb-6 shadow-[0_0_30px_rgba(255,215,0,0.4)]">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary-foreground" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-foreground mb-2">
                     {program.title}
                   </h3>
-                  <p className="text-primary text-sm font-medium mb-3">
+                  <p className="text-primary text-xs sm:text-sm font-medium mb-2 sm:mb-3">
                     {program.duration}
                   </p>
-                  <p className="text-muted-foreground">{program.description}</p>
+                  <p className="text-muted-foreground text-sm sm:text-base">{program.description}</p>
                 </div>
               );
             })}
@@ -129,28 +129,28 @@ const Services = () => {
       </section>
 
       {/* Methodology */}
-      <section className="py-24 px-6 bg-background-end/30">
+      <section className="py-16 sm:py-24 px-4 sm:px-6 bg-background-end/30">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-center mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
             The <span className="text-golden">Methodology</span>
           </h2>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
             {methodology.map((step, index) => (
-              <div key={step.step} className="flex items-center gap-4">
-                <div className="relative">
-                  <div className="w-20 h-20 rounded-full bg-gradient-golden flex items-center justify-center text-2xl font-display font-bold text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]">
+              <div key={step.step} className="flex items-center gap-4 w-full md:w-auto">
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-golden flex items-center justify-center text-xl sm:text-2xl font-display font-bold text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]">
                     {step.step}
                   </div>
                 </div>
-                <div className="md:hidden lg:block">
-                  <h3 className="font-display text-lg font-semibold text-foreground">
+                <div className="flex-1 md:hidden lg:block">
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-foreground">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">{step.description}</p>
+                  <p className="text-muted-foreground text-xs sm:text-sm">{step.description}</p>
                 </div>
                 {index < methodology.length - 1 && (
-                  <div className="hidden md:block w-16 h-1 golden-line rounded-full" />
+                  <div className="hidden md:block w-12 lg:w-16 h-1 golden-line rounded-full" />
                 )}
               </div>
             ))}
