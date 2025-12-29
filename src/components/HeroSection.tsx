@@ -3,18 +3,18 @@ import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden pt-12 pb-24">
+    <section className="min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 relative overflow-hidden pt-4 sm:pt-12 pb-20 sm:pb-24">
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-0 sm:left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 right-0 sm:right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
       
       <div className="container max-w-4xl mx-auto text-center stagger-children">
         {/* Logo */}
-        <div className="mb-6 sm:mb-8 animate-scale-in">
+        <div className="mb-4 sm:mb-8 animate-scale-in">
           <img 
             src={logo} 
             alt="The Yellow Ladder - Clear Paths. Confident Futures." 
-            className="h-24 sm:h-32 md:h-40 mx-auto"
+            className="h-32 sm:h-32 md:h-40 mx-auto"
           />
         </div>
 
