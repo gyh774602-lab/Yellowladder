@@ -1,5 +1,5 @@
-import GoldenLadder from "./GoldenLadder";
 import { ArrowDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
@@ -9,16 +9,13 @@ const HeroSection = () => {
       <div className="absolute bottom-1/4 right-0 sm:right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
       
       <div className="container max-w-4xl mx-auto text-center stagger-children">
-        {/* Logo/Brand */}
-        <div className="mb-6 sm:mb-8">
-          <span className="text-golden font-display text-sm sm:text-lg tracking-widest uppercase">
-            The Yellow Ladder
-          </span>
-        </div>
-
-        {/* 3D Golden Ladder */}
-        <div className="mb-8 sm:mb-12 animate-scale-in" style={{ animationDelay: "0.3s" }}>
-          <GoldenLadder />
+        {/* Logo */}
+        <div className="mb-6 sm:mb-8 animate-scale-in">
+          <img 
+            src={logo} 
+            alt="The Yellow Ladder - Clear Paths. Confident Futures." 
+            className="h-24 sm:h-32 md:h-40 mx-auto"
+          />
         </div>
 
         {/* Main Headline */}
