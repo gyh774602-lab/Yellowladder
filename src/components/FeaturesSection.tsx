@@ -31,7 +31,7 @@ const FeaturesSection = () => {
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <span className="text-accent text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4 block">
-            The Glass Meadow
+            What We Offer
           </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold px-4">
             Your Path to <span className="text-golden">Excellence</span>
