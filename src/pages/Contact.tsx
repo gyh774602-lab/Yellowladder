@@ -54,11 +54,10 @@ const Contact = () => {
               <button
                 key={type.id}
                 onClick={() => setSelectedType(type.id)}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all active:scale-95 ${
-                  selectedType === type.id
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all active:scale-95 ${selectedType === type.id
                     ? "bg-gradient-golden text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]"
                     : "glass-card text-foreground/70 hover:text-foreground hover:border-primary/50"
-                }`}
+                  }`}
               >
                 {type.label}
               </button>
@@ -142,7 +141,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="tel:+919876543210"
+              href="tel:+919846175552"
               className="glass-card rounded-2xl p-8 text-center group hover:border-primary/50 transition-colors"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-golden flex items-center justify-center mx-auto mb-4">
@@ -151,7 +150,7 @@ const Contact = () => {
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 Call Us
               </h3>
-              <p className="text-muted-foreground text-sm">+91 98765 43210</p>
+              <p className="text-muted-foreground text-sm">+91 98461 75552</p>
             </a>
 
             <div className="glass-card rounded-2xl p-8 text-center group hover:border-primary/50 transition-colors">
@@ -161,7 +160,7 @@ const Contact = () => {
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 Visit Us
               </h3>
-              <p className="text-muted-foreground text-sm">New Delhi, India</p>
+              <p className="text-muted-foreground text-sm">Thiruvananthapuram</p>
             </div>
           </div>
         </div>
@@ -176,7 +175,7 @@ const Contact = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/919846175552"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-6 md:bottom-8 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-40"

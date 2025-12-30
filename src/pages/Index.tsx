@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import FeaturesSection from "@/components/FeaturesSection";
-import SocialProofSection from "@/components/SocialProofSection";
+
 
 const Index = () => {
   return (
@@ -9,8 +9,8 @@ const Index = () => {
       <HeroSection />
       <PhilosophySection />
       <FeaturesSection />
-      <SocialProofSection />
-      
+
+
       {/* Footer CTA */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 text-center">
         <div className="container max-w-2xl mx-auto">
