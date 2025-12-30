@@ -7,13 +7,13 @@ const HeroSection = () => {
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-0 sm:left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-primary/10 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-1/4 right-0 sm:right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-accent/5 rounded-full blur-3xl -z-10" />
-      
+
       <div className="container max-w-4xl mx-auto text-center stagger-children">
         {/* Logo */}
         <div className="mb-4 sm:mb-8 animate-scale-in">
-          <img 
-            src={logo} 
-            alt="The Yellow Ladder - Clear Paths. Confident Futures." 
+          <img
+            src={logo}
+            alt="The Yellow Ladder - Clear Paths. Confident Futures."
             className="h-32 sm:h-32 md:h-40 mx-auto"
           />
         </div>
@@ -27,18 +27,26 @@ const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 sm:mb-12 px-4">
-          Transform your career trajectory with expert counseling, 
+          Transform your career trajectory with expert counseling,
           skill-building workshops, and corporate readiness training.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-          <button className="btn-golden px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold active:scale-95 transition-transform">
-            Begin Your Ascent
-          </button>
-          <button className="glass-card px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-medium text-foreground hover:border-primary/50 transition-colors active:scale-95">
-            Explore Programs
-          </button>
+          <a
+            href="https://theyellowladder.edumilestones.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-golden px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-semibold active:scale-95 transition-transform inline-flex items-center justify-center"
+          >
+            Psychometric test
+          </a>
+          <a
+            href="tel:+919846175552"
+            className="glass-card px-6 sm:px-8 py-4 rounded-full text-base sm:text-lg font-medium text-foreground hover:border-primary/50 transition-colors active:scale-95 inline-flex items-center justify-center"
+          >
+            Call Now
+          </a>
         </div>
       </div>
 
