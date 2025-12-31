@@ -72,11 +72,12 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
+      {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-4 sm:bottom-4 left-1/2 -translate-x-1/2 animate-bounce transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+        className={`absolute bottom-4 sm:bottom-4 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
       >
-        <div className="glass-card p-3 rounded-full">
+        <div className="glass-card p-3 rounded-full animate-bounce">
           <ArrowDown className="w-5 h-5 text-primary" />
         </div>
       </div>
