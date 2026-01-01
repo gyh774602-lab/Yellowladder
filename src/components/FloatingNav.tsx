@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Home, Users, Briefcase, Star, MessageCircle, X, Menu } from "lucide-react";
+import { Home, Users, Briefcase, Star, MessageCircle, X, Menu, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -27,8 +27,8 @@ const FloatingNav = () => {
       {/* Navigation Menu - Full screen on mobile */}
       <div
         className={`fixed inset-x-0 bottom-0 z-50 transition-all duration-500 ease-out ${isOpen
-            ? "translate-y-0 opacity-100"
-            : "translate-y-full opacity-0 pointer-events-none"
+          ? "translate-y-0 opacity-100"
+          : "translate-y-full opacity-0 pointer-events-none"
           }`}
       >
         <div className="bg-background/95 backdrop-blur-xl border-t border-border rounded-t-3xl px-6 pb-8 pt-6 safe-area-bottom">
@@ -44,8 +44,8 @@ const FloatingNav = () => {
                   to={item.path}
                   onClick={() => setIsOpen(false)}
                   className={`flex flex-col items-center gap-2 p-4 rounded-2xl transition-all duration-300 active:scale-95 ${isActive
-                      ? "bg-gradient-golden text-primary-foreground"
-                      : "glass-card hover:border-primary/50"
+                    ? "bg-gradient-golden text-primary-foreground"
+                    : "glass-card hover:border-primary/50"
                     }`}
                 >
                   <Icon className="w-6 h-6" />
@@ -72,6 +72,16 @@ const FloatingNav = () => {
           <Menu className="w-7 h-7" />
         )}
       </button>
+
+      {/* Call Now Button - Top Right */}
+      <a
+        href="tel:9847766268"
+        className="fixed top-6 right-6 z-50 px-6 py-4 rounded-full btn-golden flex items-center gap-2 transition-all duration-300 active:scale-95 shadow-[0_0_40px_rgba(255,215,0,0.3)] hover:shadow-[0_0_60px_rgba(255,215,0,0.5)]"
+      >
+        <Phone className="w-5 h-5" />
+        <span className="font-semibold hidden sm:inline">Call Now: 9847766268</span>
+        <span className="font-semibold sm:hidden">Call</span>
+      </a>
     </>
   );
 };

@@ -6,7 +6,7 @@ const features = [
     icon: Compass,
     title: "Career Clarity",
     description:
-      "Discover your true potential through personalized career assessments and one-on-one counseling sessions.",
+      "Discover your true potential through personalized career assessments and one-on-one counselling sessions.",
   },
   {
     icon: Briefcase,
@@ -27,7 +27,7 @@ const FeaturesSection = () => {
     <section className="py-16 sm:py-24 px-4 sm:px-6 relative">
       {/* Section background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-end/50 to-background-end -z-10" />
-      
+
       <div className="container max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
           <span className="text-accent text-xs sm:text-sm font-semibold uppercase tracking-widest mb-3 sm:mb-4 block">

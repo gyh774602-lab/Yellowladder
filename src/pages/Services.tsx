@@ -16,7 +16,7 @@ const studentPrograms = [
   },
   {
     icon: Target,
-    title: "Career Counseling",
+    title: "Career Counselling",
     duration: "Individual sessions",
     description: "Personalized guidance to find your ideal career path.",
   },
@@ -44,7 +44,7 @@ const institutionPrograms = [
 ];
 
 const methodology = [
-  { step: 1, title: "Counseling", description: "Understand strengths & aspirations" },
+  { step: 1, title: "Counselling", description: "Understand strengths & aspirations" },
   { step: 2, title: "Training", description: "Build skills through practice" },
   { step: 3, title: "Readiness", description: "Prepare for real opportunities" },
 ];
@@ -77,21 +77,19 @@ const Services = () => {
           <div className="glass-card rounded-full p-1.5 sm:p-2 flex">
             <button
               onClick={() => setActiveSegment("students")}
-              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${
-                activeSegment === "students"
+              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${activeSegment === "students"
                   ? "bg-gradient-golden text-primary-foreground"
                   : "text-foreground/70 hover:text-foreground"
-              }`}
+                }`}
             >
               For Students
             </button>
             <button
               onClick={() => setActiveSegment("institutions")}
-              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${
-                activeSegment === "institutions"
+              className={`flex-1 py-3 sm:py-4 rounded-full font-semibold text-sm sm:text-base transition-all active:scale-95 ${activeSegment === "institutions"
                   ? "bg-gradient-golden text-primary-foreground"
                   : "text-foreground/70 hover:text-foreground"
-              }`}
+                }`}
             >
               For Institutions
             </button>

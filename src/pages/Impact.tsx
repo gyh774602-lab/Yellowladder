@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: "Rahul K.",
     role: "Placed at TCS",
-    quote: "The counseling sessions helped me discover my true potential. Best investment in my career.",
+    quote: "The counselling sessions helped me discover my true potential. Best investment in my career.",
     before: "Struggling with aptitude tests",
     after: "Systems Analyst at TCS",
   },
@@ -79,13 +79,12 @@ const Impact = () => {
             {[1, 2, 3].map((_, index) => (
               <div
                 key={index}
-                className={`aspect-[9/16] glass-card rounded-xl sm:rounded-2xl overflow-hidden relative group cursor-pointer border-2 border-primary/30 active:scale-[0.98] transition-transform ${
-                  index === 2 ? "col-span-2 md:col-span-1" : ""
-                }`}
+                className={`aspect-[9/16] glass-card rounded-xl sm:rounded-2xl overflow-hidden relative group cursor-pointer border-2 border-primary/30 active:scale-[0.98] transition-transform ${index === 2 ? "col-span-2 md:col-span-1" : ""
+                  }`}
               >
                 {/* Placeholder for video */}
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-background-end/50" />
-                
+
                 {/* Play button */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-golden flex items-center justify-center shadow-[0_0_40px_rgba(255,215,0,0.5)] group-hover:scale-110 transition-transform">
@@ -158,11 +157,10 @@ const Impact = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`h-2 rounded-full transition-all ${
-                    index === currentSlide
+                  className={`h-2 rounded-full transition-all ${index === currentSlide
                       ? "w-6 sm:w-8 bg-gradient-golden"
                       : "w-2 bg-muted-foreground/30"
-                  }`}
+                    }`}
                 />
               ))}
             </div>

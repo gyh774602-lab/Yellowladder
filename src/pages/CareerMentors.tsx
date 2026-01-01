@@ -38,9 +38,9 @@ const mentors: Mentor[] = [
     {
         id: 2,
         name: "Vidhya Conceicoe",
-        role: "Career Counselor & Soft Skills Trainer",
+        role: "Career Counsellor & Soft Skills Trainer",
         image: mentor2,
-        bio: "A results-driven Career Counselor and Soft Skills Trainer with a strong passion for guiding students and professionals toward informed career decisions and workplace success. Experienced in career assessment, goal setting, resume building, interview preparation, and employability skill development. Committed to lifelong learning and empowering individuals to unlock their potential.",
+        bio: "A results-driven Career Counsellor and Soft Skills Trainer with a strong passion for guiding students and professionals toward informed career decisions and workplace success. Experienced in career assessment, goal setting, resume building, interview preparation, and employability skill development. Committed to lifelong learning and empowering individuals to unlock their potential.",
         expertise: ["Career Assessment", "Resume Building", "Interview Preparation", "Soft Skills"],
         education: "Soft Skills Specialist",
         social: { linkedin: "#" }
@@ -48,9 +48,9 @@ const mentors: Mentor[] = [
     {
         id: 3,
         name: "Haritha Nair",
-        role: "Corporate Trainer & Career Counselor",
+        role: "Corporate Trainer & Career Counsellor",
         image: mentor3,
-        bio: "Haritha Nair is a Corporate Trainer and Career Counselor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
+        bio: "Haritha Nair is a Corporate Trainer and Career Counsellor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
         expertise: ["Communication Skills", "Interview Readiness", "Leadership", "Personal Effectiveness"],
         education: "Corporate Training Expert",
         social: { linkedin: "#" }
@@ -58,7 +58,7 @@ const mentors: Mentor[] = [
     {
         id: 4,
         name: "Jiju K",
-        role: "L&D Professional & Career Counselor",
+        role: "L&D Professional & Career Counsellor",
         image: mentor4,
         bio: "A strategic and results-driven Learning and Development professional with over two decades of experience in the Banking and Financial Services Industry. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
         expertise: ["Career Planning", "Employability Skills", "Leadership Readiness"],

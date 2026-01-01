@@ -3,7 +3,7 @@ import { MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 
 const inquiryTypes = [
-  { id: "counseling", label: "Career Counseling" },
+  { id: "counseling", label: "Career Counselling" },
   { id: "training", label: "Skill Training" },
   { id: "general", label: "General Inquiry" },
 ];
@@ -55,8 +55,8 @@ const Contact = () => {
                 key={type.id}
                 onClick={() => setSelectedType(type.id)}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium text-sm sm:text-base transition-all active:scale-95 ${selectedType === type.id
-                    ? "bg-gradient-golden text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]"
-                    : "glass-card text-foreground/70 hover:text-foreground hover:border-primary/50"
+                  ? "bg-gradient-golden text-primary-foreground shadow-[0_0_30px_rgba(255,215,0,0.4)]"
+                  : "glass-card text-foreground/70 hover:text-foreground hover:border-primary/50"
                   }`}
               >
                 {type.label}

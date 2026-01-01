@@ -48,7 +48,7 @@ const HeroSection = () => {
 
         {/* Subheadline */}
         <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
-          Transform your career trajectory with expert counseling,
+          Transform your career trajectory with expert counselling,
           skill-building workshops, and corporate readiness training.
         </p>
 

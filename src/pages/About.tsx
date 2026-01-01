@@ -9,7 +9,7 @@ const timelineEvents = [
   {
     year: "2021",
     title: "First Partnerships",
-    description: "Collaborated with leading universities to deliver career counseling programs.",
+    description: "Collaborated with leading universities to deliver career counselling programs.",
   },
   {
     year: "2022",
@@ -29,14 +29,14 @@ const timelineEvents = [
 ];
 
 const impactStats = [
-  { value: "10,000+", label: "Hours of Counseling" },
+  { value: "10,000+", label: "Hours of Counselling" },
   { value: "50+", label: "Partner Institutions" },
   { value: "25,000+", label: "Students Empowered" },
   { value: "95%", label: "Satisfaction Rate" },
 ];
 
 const mentors = [
-  { name: "Dr. Priya Sharma", role: "Lead Career Counselor", initials: "PS" },
+  { name: "Dr. Priya Sharma", role: "Lead Career Counsellor", initials: "PS" },
   { name: "Rahul Verma", role: "Corporate Training Head", initials: "RV" },
   { name: "Anita Desai", role: "Personality Development Expert", initials: "AD" },
   { name: "Vikram Singh", role: "Industry Relations", initials: "VS" },
@@ -49,11 +49,11 @@ const About = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (!timelineRef.current) return;
-      
+
       const rect = timelineRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const sectionHeight = rect.height;
-      
+
       const scrolled = Math.max(0, windowHeight - rect.top);
       const progress = Math.min(1, scrolled / (sectionHeight + windowHeight * 0.5));
       setScrollProgress(progress);
@@ -95,9 +95,8 @@ const About = () => {
             {timelineEvents.map((event, index) => (
               <div
                 key={event.year}
-                className={`relative sm:flex sm:items-center sm:gap-8 ${
-                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
-                }`}
+                className={`relative sm:flex sm:items-center sm:gap-8 ${index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
+                  }`}
               >
                 {/* Node - positioned for mobile */}
                 <div className="absolute left-[-26px] sm:left-1/2 sm:-translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-gradient-golden shadow-[0_0_20px_rgba(255,215,0,0.5)]" />
