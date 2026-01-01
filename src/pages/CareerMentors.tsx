@@ -2,6 +2,12 @@ import { useState } from "react";
 import FloatingNav from "@/components/FloatingNav";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { User, BookOpen } from "lucide-react";
+import mentor1 from "@/assets/mentor1.png";
+import mentor2 from "@/assets/mentor2.png";
+import mentor3 from "@/assets/mentor3.png";
+import mentor4 from "@/assets/mentor4.png";
+import mentor5 from "@/assets/mentor5.png";
+import mentor6 from "@/assets/mentor6.png";
 
 interface Mentor {
     id: number;
@@ -23,7 +29,7 @@ const mentors: Mentor[] = [
         id: 1,
         name: "Rajesh R S",
         role: "Career Counsellor & Corporate Trainer",
-        image: "/src/assets/mentor1.png",
+        image: mentor1,
         bio: "Rajesh R S brings more than 16 years of rich experience across corporate, training, and career counselling domains. He has a deep understanding of workplace expectations, skill gaps, and the real challenges individuals face while planning their careers. His mission is to help every learner recognise their true potential, make informed choices, and move forward with courage.",
         expertise: ["Employability Skills", "Career Guidance", "Communication & Personality Development"],
         education: "16+ Years Experience",
@@ -33,7 +39,7 @@ const mentors: Mentor[] = [
         id: 2,
         name: "Vidhya Conceicoe",
         role: "Career Counselor & Soft Skills Trainer",
-        image: "/src/assets/mentor2.png",
+        image: mentor2,
         bio: "A results-driven Career Counselor and Soft Skills Trainer with a strong passion for guiding students and professionals toward informed career decisions and workplace success. Experienced in career assessment, goal setting, resume building, interview preparation, and employability skill development. Committed to lifelong learning and empowering individuals to unlock their potential.",
         expertise: ["Career Assessment", "Resume Building", "Interview Preparation", "Soft Skills"],
         education: "Soft Skills Specialist",
@@ -43,7 +49,7 @@ const mentors: Mentor[] = [
         id: 3,
         name: "Haritha Nair",
         role: "Corporate Trainer & Career Counselor",
-        image: "/src/assets/mentor3.png",
+        image: mentor3,
         bio: "Haritha Nair is a Corporate Trainer and Career Counselor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
         expertise: ["Communication Skills", "Interview Readiness", "Leadership", "Personal Effectiveness"],
         education: "Corporate Training Expert",
@@ -53,7 +59,7 @@ const mentors: Mentor[] = [
         id: 4,
         name: "Jiju K",
         role: "L&D Professional & Career Counselor",
-        image: "/src/assets/mentor4.png",
+        image: mentor4,
         bio: "A strategic and results-driven Learning and Development professional with over two decades of experience in the Banking and Financial Services Industry. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
         expertise: ["Career Planning", "Employability Skills", "Leadership Readiness"],
         education: "20+ Years Experience",
@@ -63,7 +69,7 @@ const mentors: Mentor[] = [
         id: 5,
         name: "Aswin Chandran C",
         role: "Learning & Development Professional",
-        image: "/src/assets/mentor5.png",
+        image: mentor5,
         bio: "A seasoned learning and development professional with over 7.5 years of experience delivering high-impact training programs to students, graduates, and working professionals. Specializes in bridging the gap between academics and industry through structured Campus to Corporate transition programs. The approach focuses on measurable outcomes and long-term skill development.",
         expertise: ["Soft Skills", "Employability Aptitude", "Design Thinking", "Data Analytics"],
         education: "7.5+ Years Experience",
@@ -73,7 +79,7 @@ const mentors: Mentor[] = [
         id: 6,
         name: "Resmi R Chandran",
         role: "Employability Skills Trainer",
-        image: "/src/assets/mentor6.png",
+        image: mentor6,
         bio: "Resmi R Chandran is an Employability Skills Trainer and practicing Career Counsellor with over three years of experience delivering youth-focused skilling and career guidance programs. She works closely with first-generation and underserved learners, enabling them to build confidence, career clarity, and sustainable employability.",
         expertise: ["Communication Skills", "Workplace Readiness", "Student Mentoring"],
         education: "3+ Years Experience",
