@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FloatingNav from "@/components/FloatingNav";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { User, Linkedin, Twitter, Mail, Award, BookOpen } from "lucide-react";
+import { User, BookOpen } from "lucide-react";
 
 interface Mentor {
     id: number;
@@ -21,52 +21,62 @@ interface Mentor {
 const mentors: Mentor[] = [
     {
         id: 1,
-        name: "Dr. Sarah Mitchell",
-        role: "Senior Career Physiologist",
-        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400",
-        bio: "With over 15 years of experience in career counseling and psychology, Dr. Mitchell specializes in anxiety management and career transitions.",
-        expertise: ["Career Anxiety", "Executive Coaching", "Transition Planning"],
-        education: "Ph.D. in Psychology, Stanford University",
-        social: { linkedin: "#", email: "sarah@example.com" }
+        name: "Rajesh R S",
+        role: "Career Counsellor & Corporate Trainer",
+        image: "/src/assets/mentor1.png",
+        bio: "Rajesh R S brings more than 16 years of rich experience across corporate, training, and career counselling domains. He has a deep understanding of workplace expectations, skill gaps, and the real challenges individuals face while planning their careers. His mission is to help every learner recognise their true potential, make informed choices, and move forward with courage.",
+        expertise: ["Employability Skills", "Career Guidance", "Communication & Personality Development"],
+        education: "16+ Years Experience",
+        social: { linkedin: "#", email: "rajesh@example.com" }
     },
     {
         id: 2,
-        name: "James Anderson",
-        role: "Corporate Readiness Coach",
-        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400",
-        bio: "James brings a decade of corporate HR experience to help students and professionals understand exactly what employers are looking for.",
-        expertise: ["Interview Preparation", "Resume Building", "Corporate Etiquette"],
-        education: "MBA, Harvard Business School",
-        social: { linkedin: "#", twitter: "#" }
+        name: "Vidhya Conceicoe",
+        role: "Career Counselor & Soft Skills Trainer",
+        image: "/src/assets/mentor2.png",
+        bio: "A results-driven Career Counselor and Soft Skills Trainer with a strong passion for guiding students and professionals toward informed career decisions and workplace success. Experienced in career assessment, goal setting, resume building, interview preparation, and employability skill development. Committed to lifelong learning and empowering individuals to unlock their potential.",
+        expertise: ["Career Assessment", "Resume Building", "Interview Preparation", "Soft Skills"],
+        education: "Soft Skills Specialist",
+        social: { linkedin: "#" }
     },
     {
         id: 3,
-        name: "Priya Patel",
-        role: "Skills Development Lead",
-        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400",
-        bio: "Priya is passionate about bridging the gap between academic learning and industry requirements through targeted skill workshops.",
-        expertise: ["Technical Skills", "Soft Skills Training", "Workshop Facilitation"],
-        education: "M.Ed. in Instructional Design",
-        social: { linkedin: "#", email: "priya@example.com" }
+        name: "Haritha Nair",
+        role: "Corporate Trainer & Career Counselor",
+        image: "/src/assets/mentor3.png",
+        bio: "Haritha Nair is a Corporate Trainer and Career Counselor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
+        expertise: ["Communication Skills", "Interview Readiness", "Leadership", "Personal Effectiveness"],
+        education: "Corporate Training Expert",
+        social: { linkedin: "#" }
     },
     {
         id: 4,
-        name: "Marcus Johnson",
-        role: "Study Abroad Consultant",
-        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400&h=400",
-        bio: "Marcus has guided hundreds of students to secure admissions in top universities across the globe.",
-        expertise: ["International Admissions", "Visa Guidance", "Scholarship Hunting"],
-        education: "MA in International Education",
-        social: { linkedin: "#", twitter: "#", email: "marcus@example.com" }
+        name: "Jiju K",
+        role: "L&D Professional & Career Counselor",
+        image: "/src/assets/mentor4.png",
+        bio: "A strategic and results-driven Learning and Development professional with over two decades of experience in the Banking and Financial Services Industry. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
+        expertise: ["Career Planning", "Employability Skills", "Leadership Readiness"],
+        education: "20+ Years Experience",
+        social: { linkedin: "#" }
     },
     {
         id: 5,
-        name: "Elena Rodriguez",
-        role: "Entrepreneurship Mentor",
-        image: "https://images.unsplash.com/photo-1598550874175-4d7112ee7f1c?auto=format&fit=crop&q=80&w=400&h=400",
-        bio: "Elena helps aspiring entrepreneurs invalidate their ideas, build business models, and pitch to investors.",
-        expertise: ["Startup Strategy", "Pitching", "Business Modeling"],
-        education: "MSc in Entrepreneurship",
+        name: "Aswin Chandran C",
+        role: "Learning & Development Professional",
+        image: "/src/assets/mentor5.png",
+        bio: "A seasoned learning and development professional with over 7.5 years of experience delivering high-impact training programs to students, graduates, and working professionals. Specializes in bridging the gap between academics and industry through structured Campus to Corporate transition programs. The approach focuses on measurable outcomes and long-term skill development.",
+        expertise: ["Soft Skills", "Employability Aptitude", "Design Thinking", "Data Analytics"],
+        education: "7.5+ Years Experience",
+        social: { linkedin: "#" }
+    },
+    {
+        id: 6,
+        name: "Resmi R Chandran",
+        role: "Employability Skills Trainer",
+        image: "/src/assets/mentor6.png",
+        bio: "Resmi R Chandran is an Employability Skills Trainer and practicing Career Counsellor with over three years of experience delivering youth-focused skilling and career guidance programs. She works closely with first-generation and underserved learners, enabling them to build confidence, career clarity, and sustainable employability.",
+        expertise: ["Communication Skills", "Workplace Readiness", "Student Mentoring"],
+        education: "3+ Years Experience",
         social: { linkedin: "#" }
     }
 ];
@@ -164,23 +174,6 @@ const CareerMentors = () => {
                                     <p className="text-sm text-muted-foreground">{selectedMentor.education}</p>
                                 </div>
 
-                                <div className="flex gap-4 pt-4 border-t border-white/10">
-                                    {selectedMentor.social.linkedin && (
-                                        <a href={selectedMentor.social.linkedin} className="text-muted-foreground hover:text-[#0077b5] transition-colors">
-                                            <Linkedin className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {selectedMentor.social.twitter && (
-                                        <a href={selectedMentor.social.twitter} className="text-muted-foreground hover:text-[#1DA1F2] transition-colors">
-                                            <Twitter className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                    {selectedMentor.social.email && (
-                                        <a href={`mailto:${selectedMentor.social.email}`} className="text-muted-foreground hover:text-golden transition-colors">
-                                            <Mail className="w-5 h-5" />
-                                        </a>
-                                    )}
-                                </div>
                             </div>
                         </>
                     )}
