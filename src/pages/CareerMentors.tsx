@@ -30,7 +30,7 @@ const mentors: Mentor[] = [
         name: "Rajesh R S",
         role: "Career Counsellor & Corporate Trainer",
         image: mentor1,
-        bio: "Rajesh R S brings more than 16 years of rich experience across corporate, training, and career counselling domains. He has a deep understanding of workplace expectations, skill gaps, and the real challenges individuals face while planning their careers. His mission is to help every learner recognise their true potential, make informed choices, and move forward with courage.",
+        bio: "Brings more than 16 years of rich experience across corporate, training, and career counselling domains. He has a deep understanding of workplace expectations, skill gaps, and the real challenges individuals face while planning their careers. His mission is to help every learner recognise their true potential, make informed choices, and move forward with courage.",
         expertise: ["Employability Skills", "Career Guidance", "Communication & Personality Development"],
         education: "16+ Years Experience",
         social: { linkedin: "#", email: "rajesh@example.com" }
@@ -50,7 +50,7 @@ const mentors: Mentor[] = [
         name: "Haritha Nair",
         role: "Corporate Trainer & Career Counsellor",
         image: mentor3,
-        bio: "Haritha Nair is a Corporate Trainer and Career Counsellor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
+        bio: "A Corporate Trainer and Career Counsellor with Yellow Ladder, dedicated to helping people build meaningful, future-ready careers. She has facilitated numerous programs for colleges and corporates, specializing in communication skills, interview readiness, leadership, and personal effectiveness. At Yellow Ladder, she continues to champion growth, resilience, and lifelong learning.",
         expertise: ["Communication Skills", "Interview Readiness", "Leadership", "Personal Effectiveness"],
         education: "Corporate Training Expert",
         social: { linkedin: "#" }
@@ -60,7 +60,7 @@ const mentors: Mentor[] = [
         name: "Jiju K",
         role: "L&D Professional & Career Counsellor",
         image: mentor4,
-        bio: "A strategic and results-driven Learning and Development professional with over two decades of experience in the Banking and Financial Services Industry. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
+        bio: "Brings over two decades of experience in the Banking and Financial Services Industry as a strategic and results-driven Learning and Development professional. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
         expertise: ["Career Planning", "Employability Skills", "Leadership Readiness"],
         education: "20+ Years Experience",
         social: { linkedin: "#" }
@@ -80,7 +80,7 @@ const mentors: Mentor[] = [
         name: "Resmi R Chandran",
         role: "Employability Skills Trainer",
         image: mentor6,
-        bio: "Resmi R Chandran is an Employability Skills Trainer and practicing Career Counsellor with over three years of experience delivering youth-focused skilling and career guidance programs. She works closely with first-generation and underserved learners, enabling them to build confidence, career clarity, and sustainable employability.",
+        bio: "Brings over three years of experience delivering youth-focused skilling and career guidance programs as an Employability Skills Trainer and practicing Career Counsellor. She works closely with first-generation and underserved learners, enabling them to build confidence, career clarity, and sustainable employability.",
         expertise: ["Communication Skills", "Workplace Readiness", "Student Mentoring"],
         education: "3+ Years Experience",
         social: { linkedin: "#" }
