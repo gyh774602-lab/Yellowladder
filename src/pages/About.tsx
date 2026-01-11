@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Target, Users, Award, ShieldCheck, Compass, Sparkles } from "lucide-react";
 
 const timelineEvents = [
   {
@@ -35,12 +36,6 @@ const impactStats = [
   { value: "95%", label: "Satisfaction Rate" },
 ];
 
-const mentors = [
-  { name: "Dr. Priya Sharma", role: "Lead Career Counsellor", initials: "PS" },
-  { name: "Rahul Verma", role: "Corporate Training Head", initials: "RV" },
-  { name: "Anita Desai", role: "Personality Development Expert", initials: "AD" },
-  { name: "Vikram Singh", role: "Industry Relations", initials: "VS" },
-];
 
 const About = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -72,10 +67,10 @@ const About = () => {
             The DNA
           </span>
           <h1 className="font-display text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
-            Our <span className="text-golden">Story</span>
+            About <span className="text-golden">Us</span>
           </h1>
           <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-            From a single idea to a movement transforming thousands of careers.
+            A clear and purposeful vision to guide the young generation towards the right academic choices and meaningful career opportunities.
           </p>
         </div>
       </section>
@@ -145,28 +140,74 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mentors */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6">
-        <div className="container max-w-6xl mx-auto">
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
-            The <span className="text-golden">Mentors</span>
-          </h2>
+      {/* Detailed Content - Premium Cards */}
+      <section className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
+        {/* Background Decorative Blobs */}
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-golden/10 rounded-full blur-[100px] pointer-events-none" />
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
-            {mentors.map((mentor) => (
-              <div
-                key={mentor.name}
-                className="glass-card grass-glow rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center group cursor-pointer active:scale-[0.98] transition-transform"
-              >
-                <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-golden flex items-center justify-center mx-auto mb-3 sm:mb-4 text-lg sm:text-2xl font-display font-bold text-primary-foreground group-hover:shadow-[0_0_40px_rgba(173,255,47,0.4)] transition-shadow">
-                  {mentor.initials}
+        <div className="container max-w-6xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+            {/* The Beginning */}
+            <div className="glass-card p-8 rounded-3xl md:col-span-2 border-primary/20 hover:border-primary/40 transition-colors group">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-golden flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <Compass className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <h3 className="font-display text-sm sm:text-lg font-semibold text-foreground">
-                  {mentor.name}
-                </h3>
-                <p className="text-muted-foreground text-xs sm:text-sm mt-1">{mentor.role}</p>
+                <div>
+                  <h3 className="font-display text-2xl font-bold mb-4 text-golden">The Beginning</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">
+                    &ldquo;The Yellow Ladder&rdquo; was founded in 2020 with a clear and purposeful vision: to guide the young generation towards the right academic choices and meaningful career opportunities. Built by a team of corporate-experienced trainers and certified counsellors, the organisation was created to bridge the long-standing gap between education and real-world employability.
+                  </p>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Evolution */}
+            <div className="glass-card p-8 rounded-3xl border-primary/10 hover:border-primary/30 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Target className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3 text-foreground">Our Evolution</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Over the years, we have evolved into a trusted career counselling and training partner for students, parents, and educational institutions. We specialise in career guidance, employability skills training, personality development, and workplace readiness programmes for school and college students. Our approach combines structured counselling methodologies with practical, industry-relevant training, ensuring that learners are not only informed but also prepared for future challenges.
+              </p>
+            </div>
+
+            {/* Impact */}
+            <div className="glass-card p-8 rounded-3xl border-primary/10 hover:border-primary/30 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3 text-foreground">Years of Impact</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                In the last five years, we have impacted thousands of learners through one-on-one counselling sessions, group workshops, institutional collaborations, and customised training programmes. Our interventions have helped students gain clarity in career decision-making, build strong communication skills, improve confidence, and develop a professional mindset essential for academic success and job readiness. Many of the students trained by us have successfully gained admission to their preferred courses and secured employment across diverse sectors.
+              </p>
+            </div>
+
+            {/* What sets us apart */}
+            <div className="glass-card p-8 rounded-3xl border-primary/10 hover:border-primary/30 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Sparkles className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3 text-foreground">Real-World Relevance</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                What sets The Yellow Ladder apart is our focus on real-world relevance. Our trainers bring firsthand corporate experience into the classroom, offering practical insights that go beyond textbooks. We strongly believe that every student is unique, and our counselling process respects individual strengths, interests, and aspirations.
+              </p>
+            </div>
+
+            {/* Our Commitment */}
+            <div className="glass-card p-8 rounded-3xl border-primary/10 hover:border-primary/30 transition-colors group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3 text-foreground">Our Commitment</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                At its core, The Yellow Ladder is driven by impact rather than numbers. We measure success by the confidence we instil, the clarity we create, and the positive direction we help young people discover. As we continue to grow, our commitment remains unchanged—to be a reliable guide at every step of the career journey and to help students climb their own ladder to a successful and fulfilling future.
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
