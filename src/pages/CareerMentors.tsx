@@ -60,7 +60,7 @@ const mentors: Mentor[] = [
         name: "Jiju K",
         role: "L&D Professional & Career Counsellor",
         image: mentor4,
-        bio: "Brings over two decades of experience in the Banking and Financial Services Industry as a strategic and results-driven Learning and Development professional. Specializes in designing and delivering high-impact training programs. Adept at mentoring individuals on career planning, employability skills, leadership readiness, and personal effectiveness.",
+        bio: "A strategic, results-driven Learning and Development leader, Jiju brings over two decades of excellence to the Banking and Financial Services Industry (BFSI). He specializes in the intersection of applied economics, finance, and behavioral sciences, designing high-impact programs that transform management performance. Having partnered with India’s premier brands—including HDFC Bank, ICICI Bank, Aditya Birla, and TATA AIA—he has delivered over 500 workshops nationwide. As a certified 'Train the Trainer' and digital learning expert, Jiju is widely recognized for his ability to equip the new-generation workforce with essential employability and leadership skills.",
         expertise: ["Career Planning", "Employability Skills", "Leadership Readiness"],
         education: "20+ Years Experience",
         social: { linkedin: "#" }
@@ -175,7 +175,7 @@ const CareerMentors = () => {
 
                                 <div>
                                     <h4 className="flex items-center gap-2 font-semibold text-foreground mb-2">
-                                        <BookOpen className="w-4 h-4 text-golden" /> Education
+                                        <BookOpen className="w-4 h-4 text-golden" /> Experience
                                     </h4>
                                     <p className="text-sm text-muted-foreground">{selectedMentor.education}</p>
                                 </div>

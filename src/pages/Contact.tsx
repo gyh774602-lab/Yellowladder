@@ -141,7 +141,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="tel:+919846175552"
+              href="tel:9847766268"
               className="glass-card rounded-2xl p-8 text-center group hover:border-primary/50 transition-colors"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-golden flex items-center justify-center mx-auto mb-4">
@@ -150,7 +150,7 @@ const Contact = () => {
               <h3 className="font-display text-lg font-semibold text-foreground mb-2">
                 Call Us
               </h3>
-              <p className="text-muted-foreground text-sm">+91 98461 75552</p>
+              <p className="text-muted-foreground text-sm">+91 98477 66268</p>
             </a>
 
             <div className="glass-card rounded-2xl p-8 text-center group hover:border-primary/50 transition-colors">
@@ -175,7 +175,7 @@ const Contact = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/919846175552"
+        href="https://wa.me/919847766268"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-6 md:bottom-8 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:scale-110 transition-transform z-40"
